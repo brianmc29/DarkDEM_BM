@@ -14,6 +14,14 @@ function createMap(){
     //For Custome basemaps - Replace your username and StyleID
     var DarkDEM = L.tileLayer(mbStyleUrl, {id: 'brianmc29/ckvnoe41y7ebt15pelxmc2lko', token: apitoken,  attribution: mbAttr});    
     
+    var darkTerrain = L.tileLayer(mbStyleUrl, {id: 'sounny/cjy6np5ld1sjg1cme97n3yosk', token: apitoken,  attribution: mbAttr});
+    
+    var grayscale   = L.tileLayer(mbUrl, {id: 'mapbox.light', token: apitoken, attribution: mbAttr});
+    
+    var dark  = L.tileLayer(mbUrl, {id: 'mapbox.dark', token: apitoken,  attribution: mbAttr});
+    
+    var outdoors = L.tileLayer(mbUrl, {id: 'mapbox.outdoors', token: apitoken,  attribution: mbAttr});
+    
           
     //create the map*/
     var map = L.map('map', {
@@ -21,6 +29,13 @@ function createMap(){
         zoom: 6, //zoom level
         layers: DarkDEM
     });
+    
+     //create the basemap control layer*/
+    var baseLayers = {
+		"Outdoors": outdoors,
+        "Grayscale": grayscale,
+		"Darkscale": dark,
+        "Dark Terrain": darkTerrain
     
         
 
