@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+            <title>Hillshade Contour - Outdoors Base - 3D</title>
+
+        <!--put your external stylesheet links here-->
+        <link rel="stylesheet"href= "lib/leaflet.css">
+        <script src ="lib/leaflet-src.js"> </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+        
+    </head>
+
+    <body>
+        <div id='map' style='width: 400px; height: 300px;'></div>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoiYnJpYW5tYzI5IiwiYSI6ImNrdm5vYWxwbmUwZTAycG1hM251dDZ1N3gifQ.yxAx6olipNKQCFJ_1hj0eA';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v11'
+            });
+        </script>
+        
+    </body>
+</html>
